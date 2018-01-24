@@ -7,12 +7,13 @@ func main(){
   a := "Applepie"
   fmt.Printf("Meine Variable a ist ein %T\n",a)
 }
-/*func test1(b,c int) int{
+func test1(b,c int) int{
   return b+c
 }
-func main(){
+/*func main(){
   fmt.Println(test1(3,4))
-}*/
+}
+*/
 /*func main(){
   for z := 0; z <= 5; z++{
     defer fmt.Println(z)
@@ -36,4 +37,4 @@ func main(){
 
   slice = append(slice, 11, 22)
   fmt.Printf("slice[%d] == %d\n",i, slice[i])
-}}
+}}*/
