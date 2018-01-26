@@ -26,8 +26,6 @@ func main() {
 	var randomNumber = randomInt(0, 11)
 	fmt.Println("The random number is: ", randomNumber)
 
-	//file names lower case
-
 	//Compare the random number with your input
 	if randomNumber == input { //equal
 		fmt.Println("You got it!")
