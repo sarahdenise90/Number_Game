@@ -7,7 +7,7 @@
         p         { color: rgb(67, 74, 112); font-size: 12px; font: italic; }
         h4        { color: rgb(162, 169, 177); }
         h3        { color: #434346; }
-        button   {background-color: #555555;border: none;
+        button5   {background-color: #555555;border: none;
                    color: white; padding: 10px 25px; text-align: center;
                    text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px;}
         code      { color: rgb(82, 82, 85); font: italic 12px Arial, sans-serif; font: bold }
@@ -18,19 +18,13 @@
 
 <body>
     <h2>Number Game</h2>
-<br></br>
-<h3>Rules</h3>
-Please enter a number between 0 and 10.<br></br>
+<h3>Result</h3>
 
-And press <code><b>submit.</b></code><br></br>
-    <form action="submit.html" method="post">   
-    <label for= "number">Number:</label>
-        <input type="text" name="number" id="number">
-    <br></br>
-    <button type="submit">Submit</button>
-<br></br>
-    <p>And the time is {{.Time}}</p>
-</form>
+<p>The random number is: </p>
+<p>Your number was: {{.Number}}</p> 
+
+<h4>Text</h4>
+
 
 </body>
 
