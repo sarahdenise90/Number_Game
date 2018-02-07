@@ -12,7 +12,7 @@
                    text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px;}
         code      { color: rgb(82, 82, 85); font: italic 12px Arial, sans-serif; font: bold }
         idk       {background-color: white; color: black; border: 2px solid #4CAF50;}
-      
+
       </style>
 </head>
 
@@ -23,11 +23,11 @@
 Please enter a number between 0 and 10.<br></br>
 
 And press <code><b>submit.</b></code><br></br>
-    <form action="submit.html" method="post">   
+    <form enctype="application/json" action="submit.html" method="post">
     <label for= "number">Number:</label>
-        <input type="text" name="number" id="number">
+        <input type="text" name="number" id="number" autocomplete="off">
     <br></br>
-    <button type="submit">Submit</button>
+    <button type="submit" name="press" value="OK">Submit</button>
 <br></br>
     <p>And the time is {{.Time}}</p>
 </form>
