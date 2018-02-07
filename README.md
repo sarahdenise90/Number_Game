@@ -1,5 +1,10 @@
 # Number_Game
 
+
+Number_Game ...
+
+If you want to try it: number-game.eu-gb.mybluemix.net
+
 ## Deployment
 
 ```
