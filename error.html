@@ -7,30 +7,26 @@
         p         { color: rgb(67, 74, 112); font-size: 12px; font: italic; }
         h4        { color: rgb(162, 169, 177); }
         h3        { color: #434346; }
-        button   {background-color: #555555;border: none;
+        button    {background-color: #555555;border: none;
                    color: white; padding: 10px 25px; text-align: center;
                    text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px;}
         code      { color: rgb(82, 82, 85); font: italic 12px Arial, sans-serif; font: bold }
         idk       {background-color: white; color: black; border: 2px solid #4CAF50;}
-
+      
       </style>
 </head>
 
 <body>
     <h2>Number Game</h2>
-<br></br>
-<h3>Rules</h3>
-Please enter a number between 0 and 10.<br></br>
+<h3>Error</h3>
 
-And press <code><b>submit.</b></code><br></br>
-    <form enctype="application/json" action="submit.html" method="post">
-    <label for= "number">Number:</label>
-        <input type="number" min="0" max="10" name="number" id="number" autocomplete="off">
+<p>Your number was: Invalid Syntax</p> 
 
-    <br></br>
-    <button type="submit" name="press" value="OK">Submit</button>
-<br></br>
-    <p>And the time is {{.Time}}</p>
+<h4>Next try! Please enter a valid number</h4>
+
+
+<form>
+    <input type="button" value="Back" onclick="history.back()">
 </form>
 
 </body>

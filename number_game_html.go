@@ -30,6 +30,7 @@ func main() {
 
 	http.HandleFunc("/", index)
 	http.HandleFunc("/submit.html", submitHandler)
+
 	// Increment a stat counter
 	//client.Increment("stat.metric1")
 
@@ -67,6 +68,12 @@ func index(w http.ResponseWriter, r *http.Request) {
 func submitHandler(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	number := r.FormValue("number")
+	/*v := number
+	if s, err := strconv.Atoi(v); err == nil {
+		fmt.Printf("%T, %number", s, s)
+		} else {
+		fmt.Println(err)
+	}*/
 	i, _ := strconv.Atoi(number)
 	fmt.Println("Your number is:", i)
 	randomNumber := randomInt(0, 11)
@@ -74,17 +81,28 @@ func submitHandler(w http.ResponseWriter, r *http.Request) {
 	value1 := "Next try!"
 
 	//Error Handling
-	if i >= 11 {
+	/*if i >= 11 {
 		fmt.Println("Wrong input")
 		value1 = "Wrong input!\n Please enter a number between 0 and 10"
-	}
+	}*/
 	if randomNumber == i {
 		fmt.Println(value1)
 		value1 = "Got it"
 	}
-	calcIndexes := ResultData{i, randomNumber, value1}
+	v := number
+	if s, err := strconv.Atoi(v); err == nil{
+		fmt.Printf("%T, %number", s,s)
+		calcIndexes := ResultData{i, randomNumber, value1}
 	t, _ := template.ParseFiles("submit.html")
-	t.Execute(w, calcIndexes)
+		t.Execute(w, calcIndexes)
+	}else {
+		fmt.Println(err)
+		calcIndexes := ResultData{i, randomNumber, value1}
+		t, _ := template.ParseFiles("error.html")
+			t.Execute(w, calcIndexes)
+	}
+	
+
 }
 
 //Int >= min oder <max handler func draus machen mit Query Parameter eingabe Zahl
